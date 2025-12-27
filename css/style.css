@@ -1,6 +1,4 @@
-/* ===============================
-   RESET + BASE
-================================ */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -9,39 +7,31 @@
 }
 
 body {
-  min-height: 100vh;
   background: linear-gradient(135deg, #0a4dbf, #1e88ff);
-  color: #ffffff;
+  color: #fff;
   overflow-x: hidden;
 }
 
-/* ===============================
-   HEADER FIXO
-================================ */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 18px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
   z-index: 1000;
 }
 
 .logo {
   height: 42px;
-  object-fit: contain;
 }
 
-/* ===============================
-   MENU 3 BARRAS
-================================ */
+/* MENU BTN */
 .menu-btn {
   width: 28px;
   height: 20px;
@@ -53,26 +43,20 @@ header {
 
 .menu-btn span {
   height: 3px;
-  width: 100%;
-  background: #ffffff;
+  background: #fff;
   border-radius: 4px;
-  transition: 0.3s;
 }
 
-/* ===============================
-   SIDEBAR (ABA LATERAL)
-================================ */
+/* SIDEBAR */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -320px;
+  left: -300px;
   width: 280px;
   height: 100%;
-  background: rgba(10, 77, 191, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10,77,191,0.95);
   padding: 24px;
-  transition: left 0.4s ease;
+  transition: 0.4s;
   z-index: 1200;
   border-radius: 0 20px 20px 0;
 }
@@ -88,31 +72,22 @@ header {
 
 .sidebar a {
   display: block;
-  padding: 14px 16px;
+  padding: 14px;
   margin-bottom: 12px;
   border-radius: 16px;
   text-decoration: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  transition: transform 0.2s, background 0.2s;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
 }
 
-.sidebar a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateX(6px);
-}
-
-/* ===============================
-   OVERLAY
-================================ */
+/* OVERLAY */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: 0.3s;
   z-index: 1100;
 }
 
@@ -121,9 +96,7 @@ header {
   pointer-events: auto;
 }
 
-/* ===============================
-   CONTEÚDO
-================================ */
+/* MAIN */
 main {
   padding-top: 90px;
   width: 92%;
@@ -131,46 +104,29 @@ main {
   margin: auto;
 }
 
-/* ===============================
-   TÍTULO CATÁLOGO
-================================ */
+/* TITLE */
 .catalog-title {
-  text-align: center;
   font-size: 32px;
-  font-weight: 700;
   margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.15);
   padding: 16px 28px;
   border-radius: 24px;
-  display: inline-block;
 }
 
-/* ===============================
-   GRID / LISTA DE CARROS
-================================ */
+/* LIST */
 .car-list {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
-/* ===============================
-   CARD LIQUID GLASS
-================================ */
+/* CARD */
 .car-card {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255,255,255,0.14);
   backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
   border-radius: 26px;
   padding: 22px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.car-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
 }
 
 .car-card h3 {
@@ -180,52 +136,33 @@ main {
 
 .car-info {
   font-size: 15px;
-  opacity: 0.95;
   margin-bottom: 6px;
 }
 
-/* ===============================
-   ÁREA DAS FOTOS (SEM IMAGENS)
-================================ */
+/* PHOTO */
 .photo-area {
-  width: 100%;
   height: 200px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   border-radius: 22px;
   margin-bottom: 18px;
   position: relative;
-  overflow: hidden;
 }
 
-/* ===============================
-   SETAS DAS FOTOS
-================================ */
+/* ARROWS */
 .arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.arrow:hover {
-  transform: translateY(-50%) scale(1.1);
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-50%);
 }
 
 .arrow.left { left: 12px; }
 .arrow.right { right: 12px; }
 
-/* ===============================
-   BOTÕES WHATSAPP / LIGAR
-================================ */
+/* ACTIONS */
 .actions {
   display: flex;
   gap: 14px;
@@ -234,38 +171,18 @@ main {
 
 .btn {
   flex: 1;
-  text-align: center;
   padding: 14px;
   border-radius: 22px;
-  font-weight: 700;
+  text-align: center;
   text-decoration: none;
-  color: white;
-  backdrop-filter: blur(12px);
-  transition: transform 0.15s;
-}
-
-.btn:active {
-  transform: scale(0.94);
+  color: #fff;
+  font-weight: bold;
 }
 
 .btn.whatsapp {
-  background: rgba(37, 211, 102, 0.35);
+  background: rgba(37,211,102,0.35);
 }
 
 .btn.call {
-  background: rgba(30, 136, 255, 0.35);
+  background: rgba(30,136,255,0.35);
 }
-
-/* ===============================
-   RESPONSIVO
-================================ */
-@media (max-width: 768px) {
-  .photo-area {
-    height: 180px;
-  }
-
-  .catalog-title {
-    font-size: 26px;
-  }
-}
-
