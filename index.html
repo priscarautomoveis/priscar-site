@@ -15,7 +15,8 @@
     <span></span>
   </div>
 
-  <img src="img/logo.png" alt="PrisCar" class="logo">
+  <!-- LOGO AO CENTRO -->
+  <img src="img/logo.png" alt="PrisCar" class="logo center-logo">
 </header>
 
 <div class="sidebar" id="sidebar">
@@ -28,16 +29,24 @@
 <div class="overlay" id="overlay"></div>
 
 <main>
-  <div style="text-align:center;">
+
+  <div class="catalog-wrapper">
     <div class="catalog-title">Catálogo de Carros</div>
   </div>
 
   <div class="car-list">
 
+    <!-- CARRO 1 -->
     <div class="car-card">
       <div class="photo-area">
-        <div class="arrow right"></div>
+        <img src="img/bmw1-1.jpg" class="car-photo active">
+        <img src="img/bmw1-2.jpg" class="car-photo">
+        <img src="img/bmw1-3.jpg" class="car-photo">
+
+        <button class="arrow left">&#10094;</button>
+        <button class="arrow right">&#10095;</button>
       </div>
+
       <h3>BMW Série 1</h3>
       <div class="car-info">Ano: 2019</div>
       <div class="car-info">Km: 85 000</div>
@@ -49,38 +58,8 @@
       </div>
     </div>
 
-    <div class="car-card">
-      <div class="photo-area">
-        <div class="arrow left"></div>
-        <div class="arrow right"></div>
-      </div>
-      <h3>Audi A3</h3>
-      <div class="car-info">Ano: 2018</div>
-      <div class="car-info">Km: 92 000</div>
-      <div class="car-info">Combustível: Gasóleo</div>
-
-      <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-        <a class="btn call" href="tel:936707997">Ligar</a>
-      </div>
-    </div>
-
-    <div class="car-card">
-      <div class="photo-area">
-        <div class="arrow left"></div>
-      </div>
-      <h3>Mercedes Classe A</h3>
-      <div class="car-info">Ano: 2020</div>
-      <div class="car-info">Km: 60 000</div>
-      <div class="car-info">Combustível: Gasolina</div>
-
-      <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-        <a class="btn call" href="tel:936707997">Ligar</a>
-      </div>
-    </div>
-
   </div>
+
 </main>
 
 <script src="js/script.js"></script>
