@@ -1,1 +1,271 @@
+/* ===============================
+   RESET + BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a4dbf, #1e88ff);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   HEADER FIXO
+================================ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 1000;
+}
+
+.logo {
+  height: 42px;
+  object-fit: contain;
+}
+
+/* ===============================
+   MENU 3 BARRAS
+================================ */
+.menu-btn {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* ===============================
+   SIDEBAR (ABA LATERAL)
+================================ */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 280px;
+  height: 100%;
+  background: rgba(10, 77, 191, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 24px;
+  transition: left 0.4s ease;
+  z-index: 1200;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(6px);
+}
+
+/* ===============================
+   OVERLAY
+================================ */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1100;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===============================
+   CONTEÚDO
+================================ */
+main {
+  padding-top: 90px;
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   TÍTULO CATÁLOGO
+================================ */
+.catalog-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  padding: 16px 28px;
+  border-radius: 24px;
+  display: inline-block;
+}
+
+/* ===============================
+   GRID / LISTA DE CARROS
+================================ */
+.car-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===============================
+   CARD LIQUID GLASS
+================================ */
+.car-card {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 26px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.car-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.car-info {
+  font-size: 15px;
+  opacity: 0.95;
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   ÁREA DAS FOTOS (SEM IMAGENS)
+================================ */
+.photo-area {
+  width: 100%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===============================
+   SETAS DAS FOTOS
+================================ */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left { left: 12px; }
+.arrow.right { right: 12px; }
+
+/* ===============================
+   BOTÕES WHATSAPP / LIGAR
+================================ */
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  border-radius: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  backdrop-filter: blur(12px);
+  transition: transform 0.15s;
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+.btn.whatsapp {
+  background: rgba(37, 211, 102, 0.35);
+}
+
+.btn.call {
+  background: rgba(30, 136, 255, 0.35);
+}
+
+/* ===============================
+   RESPONSIVO
+================================ */
+@media (max-width: 768px) {
+  .photo-area {
+    height: 180px;
+  }
+
+  .catalog-title {
+    font-size: 26px;
+  }
+}
 
