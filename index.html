@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrisCar | Catálogo de Carros</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>PrisCar – Catálogo de Viaturas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,8 +15,10 @@
     <span></span>
   </div>
 
-  <!-- LOGO AO CENTRO -->
-  <img src="img/logo.png" alt="PrisCar" class="logo center-logo">
+  <div class="logo-container">
+    <!-- depois metes o logo real -->
+    <h1 class="logo-text">PrisCar</h1>
+  </div>
 </header>
 
 <div class="sidebar" id="sidebar">
@@ -29,39 +31,38 @@
 <div class="overlay" id="overlay"></div>
 
 <main>
+  <section class="catalog-title">
+    <span>Catálogo de Viaturas</span>
+  </section>
 
-  <div class="catalog-wrapper">
-    <div class="catalog-title">Catálogo de Carros</div>
-  </div>
-
-  <div class="car-list">
-
-    <!-- CARRO 1 -->
-    <div class="car-card">
-      <div class="photo-area">
-        <img src="img/bmw1-1.jpg" class="car-photo active">
-        <img src="img/bmw1-2.jpg" class="car-photo">
-        <img src="img/bmw1-3.jpg" class="car-photo">
-
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-      </div>
-
-      <h3>BMW Série 1</h3>
-      <div class="car-info">Ano: 2019</div>
-      <div class="car-info">Km: 85 000</div>
-      <div class="car-info">Combustível: Diesel</div>
-
-      <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-        <a class="btn call" href="tel:936707997">Ligar</a>
-      </div>
+  <!-- CARD DE CARRO (MODELO) -->
+  <section class="car-card">
+    <div class="photo-area">
+      <button class="arrow left disabled">‹</button>
+      <div class="photo-placeholder"></div>
+      <button class="arrow right">›</button>
     </div>
 
-  </div>
+    <div class="car-info">
+      <h3>BMW Série 1</h3>
+      <p>Ano: 2018</p>
+      <p>Combustível: Gasóleo</p>
+      <p>Quilómetros: 120 000 km</p>
+      <p class="price">16 900 €</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">
+        WhatsApp
+      </a>
+      <a class="btn call" href="tel:+351936707997">
+        Ligar
+      </a>
+    </div>
+  </section>
 
 </main>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
