@@ -20,19 +20,20 @@ header {
   height: 64px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 18px;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(18px);
   z-index: 1000;
 }
 
-.logo {
+.center-logo {
   height: 42px;
 }
 
-/* MENU BTN */
 .menu-btn {
+  position: absolute;
+  left: 18px;
   width: 28px;
   height: 20px;
   display: flex;
@@ -61,9 +62,7 @@ header {
   border-radius: 0 20px 20px 0;
 }
 
-.sidebar.active {
-  left: 0;
-}
+.sidebar.active { left: 0; }
 
 .sidebar h2 {
   font-size: 26px;
@@ -104,59 +103,68 @@ main {
   margin: auto;
 }
 
-/* TITLE */
+.catalog-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .catalog-title {
   font-size: 32px;
-  margin-bottom: 40px;
   background: rgba(255,255,255,0.15);
   padding: 16px 28px;
   border-radius: 24px;
+  display: inline-block;
 }
 
-/* LIST */
+/* CARDS */
 .car-list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 30px;
 }
 
-/* CARD */
 .car-card {
   background: rgba(255,255,255,0.14);
   backdrop-filter: blur(18px);
   border-radius: 26px;
   padding: 22px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
-.car-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.car-info {
-  font-size: 15px;
-  margin-bottom: 6px;
-}
-
-/* PHOTO */
+/* PHOTO SLIDER */
 .photo-area {
-  height: 200px;
-  background: rgba(255,255,255,0.12);
-  border-radius: 22px;
-  margin-bottom: 18px;
   position: relative;
+  height: 220px;
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: rgba(255,255,255,0.1);
+}
+
+.car-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.car-photo.active {
+  opacity: 1;
 }
 
 /* ARROWS */
 .arrow {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-50%);
+  background: rgba(255,255,255,0.35);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .arrow.left { left: 12px; }
@@ -179,10 +187,5 @@ main {
   font-weight: bold;
 }
 
-.btn.whatsapp {
-  background: rgba(37,211,102,0.35);
-}
-
-.btn.call {
-  background: rgba(30,136,255,0.35);
-}
+.btn.whatsapp { background: rgba(37,211,102,0.35); }
+.btn.call { background: rgba(30,136,255,0.35); }
