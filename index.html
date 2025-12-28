@@ -21,19 +21,20 @@
 
 <div class="sidebar" id="sidebar">
   <h2>PrisCar</h2>
-  <a href="#">Catálogo</a>
-  <a href="#">Sobre Nós</a>
-  <a href="#">Contactos</a>
+  <a href="#catalog">Catálogo</a>
+  <a href="#sobre-nos">Sobre Nós</a>
+  <a href="#contactos">Contactos</a>
 </div>
 
 <div class="overlay" id="overlay"></div>
 
 <main>
-  <section class="catalog-title">
+
+  <section id="catalog" class="catalog-title">
     <span>Catálogo de Viaturas</span>
   </section>
 
-  <!-- Exemplo de carro -->
+  <!-- Card de carro -->
   <section class="car-card">
     <div class="photo-area">
       <button class="arrow left disabled">‹</button>
@@ -46,6 +47,44 @@
       <p>Combustível: Gasóleo</p>
       <p>Quilómetros: 120 000 km</p>
       <p class="price">16 900 €</p>
+    </div>
+    <div class="actions">
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+      <a class="btn call" href="tel:+351936707997">Ligar</a>
+    </div>
+  </section>
+
+  <section class="car-card">
+    <div class="photo-area">
+      <button class="arrow left">‹</button>
+      <div class="photo-placeholder">Foto 1</div>
+      <button class="arrow right">›</button>
+    </div>
+    <div class="car-info">
+      <h3>Mercedes A200</h3>
+      <p>Ano: 2019</p>
+      <p>Combustível: Gasolina</p>
+      <p>Quilómetros: 90 000 km</p>
+      <p class="price">19 500 €</p>
+    </div>
+    <div class="actions">
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+      <a class="btn call" href="tel:+351936707997">Ligar</a>
+    </div>
+  </section>
+
+  <section class="car-card">
+    <div class="photo-area">
+      <button class="arrow left">‹</button>
+      <div class="photo-placeholder">Foto 1</div>
+      <button class="arrow right disabled">›</button>
+    </div>
+    <div class="car-info">
+      <h3>Audi A3</h3>
+      <p>Ano: 2020</p>
+      <p>Combustível: Gasolina</p>
+      <p>Quilómetros: 50 000 km</p>
+      <p class="price">22 900 €</p>
     </div>
     <div class="actions">
       <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
