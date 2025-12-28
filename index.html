@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrisCar – Catálogo de Viaturas</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrisCar – Catálogo de Viaturas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="menu-toggle" id="menuToggle">
+  <div class="menu-btn" id="menuBtn">
     <span></span>
     <span></span>
     <span></span>
   </div>
+
   <div class="logo-container">
     <h1 class="logo-text">PrisCar</h1>
   </div>
@@ -25,6 +26,7 @@
   <a href="#">Sobre Nós</a>
   <a href="#">Contactos</a>
 </div>
+
 <div class="overlay" id="overlay"></div>
 
 <main>
@@ -32,13 +34,20 @@
     <span>Catálogo de Viaturas</span>
   </section>
 
-  <!-- CARRO 1 -->
+  <!-- CARRO 1: Citroën C3 -->
   <section class="car-card">
-    <div class="photo-area">
+    <div class="photo-area" data-total="9">
       <button class="arrow left disabled">‹</button>
       <div class="photo-slider">
-        <img src="img/citroen-c3-1.jpg" alt="Citroën C3 1">
-        <img src="img/citroen-c3-2.jpg" alt="Citroën C3 2">
+        <img src="img/citroen-c3/1.jpg" alt="Citroën C3" class="active">
+        <img src="img/citroen-c3/2.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/3.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/4.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/5.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/6.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/7.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/8.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/9.jpg" alt="Citroën C3">
       </div>
       <button class="arrow right">›</button>
     </div>
@@ -55,14 +64,19 @@
     </div>
   </section>
 
-  <!-- CARRO 2 -->
+  <!-- CARRO 2: Mini Mini-S -->
   <section class="car-card">
-    <div class="photo-area">
+    <div class="photo-area" data-total="8">
       <button class="arrow left disabled">‹</button>
       <div class="photo-slider">
-        <img src="img/mini-mini-s-1.jpg" alt="Mini Mini-S 1">
-        <img src="img/mini-mini-s-2.jpg" alt="Mini Mini-S 2">
-        <img src="img/mini-mini-s-3.jpg" alt="Mini Mini-S 3">
+        <img src="img/mini-mini-s/1.jpg" alt="Mini Mini-S" class="active">
+        <img src="img/mini-mini-s/2.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/3.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/4.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/5.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/6.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/7.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/8.jpg" alt="Mini Mini-S">
       </div>
       <button class="arrow right">›</button>
     </div>
@@ -78,6 +92,7 @@
       <a class="btn call" href="tel:+351936707997">Ligar</a>
     </div>
   </section>
+
 </main>
 
 <script src="script.js"></script>
