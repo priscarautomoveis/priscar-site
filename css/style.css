@@ -7,10 +7,8 @@ header {
   display:flex; align-items:center; justify-content:center;
   background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); z-index:1000;
 }
-
 .menu-btn { position:absolute; left:20px; display:flex; flex-direction:column; gap:5px; cursor:pointer; }
 .menu-btn span { width:25px; height:3px; background:#fff; border-radius:5px; }
-
 .logo { height:50px; }
 
 /* SIDEBAR */
