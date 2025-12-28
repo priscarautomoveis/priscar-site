@@ -21,3 +21,4 @@ document.querySelectorAll(".car-card").forEach(card => {
     update();
   });
 });
+
