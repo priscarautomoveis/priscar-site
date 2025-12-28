@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrisCar – Catálogo de Viaturas</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrisCar – Catálogo de Viaturas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="topbar">
   <div class="menu-btn" id="menuBtn">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <div class="logo-container">
-    <h1 class="logo-text">PrisCar</h1>
-  </div>
+  <div class="logo-center">PrisCar</div>
 </header>
 
-<div class="sidebar" id="sidebar">
+<nav class="sidebar" id="sidebar">
   <h2>PrisCar</h2>
   <a href="#">Catálogo</a>
   <a href="#">Sobre Nós</a>
   <a href="#">Contactos</a>
-</div>
+</nav>
 
 <div class="overlay" id="overlay"></div>
 
@@ -34,42 +32,41 @@
     <span>Catálogo de Viaturas</span>
   </section>
 
-  <!-- CARRO 1 -->
+  <!-- CARRO -->
   <section class="car-card">
     <div class="photo-area">
-      <button class="arrow left disabled">‹</button>
-      <img class="car-photo" src="591983293_1298381835431234_5996259538748945635_n.jpg" alt="Citroën C3">
-      <button class="arrow right disabled">›</button>
-    </div>
-    <div class="car-info">
-      <h3>Citroën C3 Pure Tech S&S Feel</h3>
-      <p class="car-detail">Ano: 2018</p>
-      <p class="car-detail">Combustível: Gasolina</p>
-      <p class="car-detail">Quilómetros: 50 000 km</p>
-      <p class="price">14 900 €</p>
-    </div>
-    <div class="actions">
-      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-      <a class="btn call" href="tel:+351936707997">Ligar</a>
-    </div>
-  </section>
+      <button class="arrow left disabled">❮</button>
 
-  <!-- CARRO SEM FOTO -->
-  <section class="car-card">
-    <div class="photo-area">
-      <button class="arrow left disabled">‹</button>
-      <div class="photo-placeholder">Sem Foto</div>
-      <button class="arrow right disabled">›</button>
+      <!-- FOTO (se não houver, fica placeholder) -->
+      <img src="591983293_1298381835431234_5996259538748945635_n.jpg"
+           alt="Citroën C3 PureTech"
+           class="car-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+      <div class="photo-placeholder">
+        Sem foto disponível
+      </div>
+
+      <button class="arrow right disabled">❯</button>
     </div>
+
     <div class="car-info">
-      <h3>BMW Série 1</h3>
-      <p class="car-detail">Ano: 2018</p>
-      <p class="car-detail">Combustível: Gasóleo</p>
-      <p class="car-detail">Quilómetros: 120 000 km</p>
-      <p class="price">16 900 €</p>
+      <h3>Citroën C3 PureTech S&S Feel</h3>
+
+      <div class="details">
+        <span>Ano: 2020</span>
+        <span>Gasolina</span>
+        <span>75 000 km</span>
+      </div>
+
+      <div class="price">12 900 €</div>
     </div>
+
     <div class="actions">
-      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+      <a class="btn whatsapp"
+         href="https://wa.me/351936707997?text=Olá%2C%20tenho%20interesse%20no%20Citroën%20C3"
+         target="_blank">WhatsApp</a>
+
       <a class="btn call" href="tel:+351936707997">Ligar</a>
     </div>
   </section>
