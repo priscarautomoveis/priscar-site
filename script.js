@@ -1,31 +1,19 @@
 const menuBtn = document.getElementById('menuBtn');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
-const moreBtn = document.getElementById('moreBtn');
 
 menuBtn.addEventListener('click', () => {
-  sidebar.classList.add('active');
-  overlay.classList.add('active');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
 });
+
+// Fecha sidebar clicando no overlay
 overlay.addEventListener('click', () => {
   sidebar.classList.remove('active');
   overlay.classList.remove('active');
 });
 
-// MENU LATERAL MAIS (3 PONTOS)
-let moreOpen = false;
-moreBtn.addEventListener('click', () => {
-  moreOpen = !moreOpen;
-  overlay.classList.toggle('active', moreOpen);
-  sidebar.classList.toggle('active', moreOpen);
-  if(moreOpen) {
-    moreBtn.innerHTML = '&times;'; // muda para X
-  } else {
-    moreBtn.innerHTML = '&#8942;'; // volta para 3 pontos
-  }
-});
-
-// SETAS DAS FOTOS
+// Setas fotos
 document.querySelectorAll('.car-card').forEach(card => {
   const left = card.querySelector('.arrow.left');
   const right = card.querySelector('.arrow.right');
