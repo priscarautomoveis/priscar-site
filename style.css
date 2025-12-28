@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f1b2d, #0b2545);
+  background: linear-gradient(135deg, #182744, #1a345e);
   color: #fff;
   min-height: 100vh;
 }
@@ -49,8 +49,8 @@ header {
 }
 
 .logo {
-  height: 90px;       /* maior que antes */
-  max-width: 300px;   /* acompanha o aumento sem distorcer */
+  height: 130px;       /* maior que antes */
+  max-width: 400px;   /* acompanha o aumento sem distorcer */
   object-fit: contain;
 }
 
