@@ -1,109 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrisCar – Catálogo de Viaturas</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrisCar – Catálogo de Viaturas</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="menu-btn" id="menuBtn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="logo-container">
-      <h1 class="logo-text">PrisCar</h1>
-    </div>
-  </header>
-
-  <!-- SIDEBAR LATERAL -->
-  <div class="sidebar" id="sidebar">
-    <h2>PrisCar</h2>
-    <a href="#catalog">Catálogo</a>
-    <a href="#about">Sobre Nós</a>
-    <a href="#contact">Contactos</a>
+<header>
+  <div class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay"></div>
+  <div class="logo-container">
+    <h1 class="logo-text">PrisCar</h1>
+  </div>
 
-  <!-- MAIN -->
-  <main>
-    <!-- Título do Catálogo -->
-    <section id="catalog" class="catalog-title">
-      <span>Catálogo de Viaturas</span>
-    </section>
+  <div class="more-btn" id="moreBtn">&#8942;</div>
+</header>
 
-    <!-- CARDS DE CARROS -->
-    <section class="car-card">
-     <div class="photo-area">
-        <!-- Primeira foto, por isso seta esquerda desativada -->
-        <button class="arrow left disabled">‹</button>
-        <img src="591983293_1298381835431234_5996259538748945635_n.jpg" alt="Citroën C3 Pure Tech S&S Feel" class="car-photo">
-        <button class="arrow right disabled">›</button>
-      </div>
-      <div class="car-info">
-        <h3>Citroën C3 Pure Tech S&S Feel</h3>
-        <p>Ano: 2017</p>
-        <p>Combustível: Gasóleo</p>
-        <p>Quilómetros: 114.000 km</p>
-        <p class="price">8,990 €</p>
-      </div>
-      <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-        <a class="btn call" href="tel:+351936707997">Ligar</a>
-      </div>
-    </section>
+<div class="sidebar" id="sidebar">
+  <h2>PrisCar</h2>
+  <a href="#">Catálogo</a>
+  <a href="#">Sobre Nós</a>
+  <a href="#">Contactos</a>
+</div>
 
-    <section class="car-card">
-      <div class="photo-area">
-        <button class="arrow left disabled">‹</button>
-        <div class="photo-placeholder">Foto 2</div>
-        <button class="arrow right">›</button>
-      </div>
-      <div class="car-info">
-        <h3>Audi A3</h3>
-        <p>Ano: 2019</p>
-        <p>Combustível: Gasolina</p>
-        <p>Quilómetros: 90 000 km</p>
-        <p class="price">18 500 €</p>
-      </div>
-      <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-        <a class="btn call" href="tel:+351936707997">Ligar</a>
-      </div>
-    </section>
+<div class="overlay" id="overlay"></div>
 
-    <section class="car-card">
-      <div class="photo-area">
-        <button class="arrow left disabled">‹</button>
-        <div class="photo-placeholder">Foto 3</div>
-        <button class="arrow right disabled">›</button>
-      </div>
-      <div class="car-info">
-        <h3>Mercedes Classe A</h3>
-        <p>Ano: 2020</p>
-        <p>Combustível: Diesel</p>
-        <p>Quilómetros: 60 000 km</p>
-        <p class="price">21 900 €</p>
-      </div>
-      <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-        <a class="btn call" href="tel:+351936707997">Ligar</a>
-      </div>
-    </section>
+<main>
+  <section class="catalog-title">
+    <span>Catálogo de Viaturas</span>
+  </section>
 
-  </main>
+  <!-- CARRO 1 -->
+  <section class="car-card">
+    <div class="photo-area">
+      <button class="arrow left disabled">‹</button>
+      <img class="car-photo" src="591983293_1298381835431234_5996259538748945635_n.jpg" alt="Citroën C3">
+      <button class="arrow right disabled">›</button>
+    </div>
+    <div class="car-info">
+      <h3>Citroën C3 Pure Tech S&S Feel</h3>
+      <p class="car-detail">Ano: 2018</p>
+      <p class="car-detail">Combustível: Gasolina</p>
+      <p class="car-detail">Quilómetros: 50 000 km</p>
+      <p class="price">14 900 €</p>
+    </div>
+    <div class="actions">
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+      <a class="btn call" href="tel:+351936707997">Ligar</a>
+    </div>
+  </section>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+  <!-- CARRO SEM FOTO -->
+  <section class="car-card">
+    <div class="photo-area">
+      <button class="arrow left disabled">‹</button>
+      <div class="photo-placeholder">Sem Foto</div>
+      <button class="arrow right disabled">›</button>
+    </div>
+    <div class="car-info">
+      <h3>BMW Série 1</h3>
+      <p class="car-detail">Ano: 2018</p>
+      <p class="car-detail">Combustível: Gasóleo</p>
+      <p class="car-detail">Quilómetros: 120 000 km</p>
+      <p class="price">16 900 €</p>
+    </div>
+    <div class="actions">
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+      <a class="btn call" href="tel:+351936707997">Ligar</a>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
