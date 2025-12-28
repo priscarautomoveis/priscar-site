@@ -49,9 +49,9 @@ header {
 }
 
 .logo {
-  height: 100px;          /* ajusta conforme a altura desejada */
-  max-width: 300px;      /* evita que fique enorme */
-  object-fit: contain;    /* mantém proporção e qualidade */
+  height: 90px;       /* maior que antes */
+  max-width: 300px;   /* acompanha o aumento sem distorcer */
+  object-fit: contain;
 }
 
 
