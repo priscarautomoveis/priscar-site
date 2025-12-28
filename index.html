@@ -8,22 +8,24 @@
 </head>
 <body>
 
-<header class="topbar">
+<header>
   <div class="menu-btn" id="menuBtn">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <div class="logo-center">PrisCar</div>
+  <div class="logo-container">
+    <h1 class="logo-text">PrisCar</h1>
+  </div>
 </header>
 
-<nav class="sidebar" id="sidebar">
+<div class="sidebar" id="sidebar">
   <h2>PrisCar</h2>
   <a href="#">Catálogo</a>
   <a href="#">Sobre Nós</a>
   <a href="#">Contactos</a>
-</nav>
+</div>
 
 <div class="overlay" id="overlay"></div>
 
@@ -32,43 +34,61 @@
     <span>Catálogo de Viaturas</span>
   </section>
 
-  <!-- CARRO -->
+  <!-- CARRO 1: Citroën C3 -->
   <section class="car-card">
-    <div class="photo-area">
-      <button class="arrow left disabled">❮</button>
-
-      <!-- FOTO (se não houver, fica placeholder) -->
-      <img src="591983293_1298381835431234_5996259538748945635_n.jpg"
-      <img src="591882051_844124985022671_7700103474329712334_n.jpg"
-      
-           alt="Citroën C3 PureTech"
-           class="car-photo"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-      <div class="photo-placeholder">
-        Sem foto disponível
+    <div class="photo-area" data-total="9">
+      <button class="arrow left disabled">‹</button>
+      <div class="photo-slider">
+        <img src="img/citroen-c3/1.jpg" alt="Citroën C3" class="active">
+        <img src="img/citroen-c3/2.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/3.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/4.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/5.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/6.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/7.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/8.jpg" alt="Citroën C3">
+        <img src="img/citroen-c3/9.jpg" alt="Citroën C3">
       </div>
-
-      <button class="arrow right disabled">❯</button>
+      <button class="arrow right">›</button>
     </div>
-
     <div class="car-info">
-      <h3>Citroën C3 PureTech S&S Feel</h3>
-
-      <div class="details">
-        <span>Ano: 2020</span>
-        <span>Gasolina</span>
-        <span>75 000 km</span>
-      </div>
-
-      <div class="price">12 900 €</div>
+      <h3>Citroën C3 Pure Tech S&S Feel</h3>
+      <p class="year">Ano: 2018</p>
+      <p class="fuel">Combustível: Gasóleo</p>
+      <p class="km">Quilómetros: 120 000 km</p>
+      <p class="price">16 900 €</p>
     </div>
-
     <div class="actions">
-      <a class="btn whatsapp"
-         href="https://wa.me/351936707997?text=Olá%2C%20tenho%20interesse%20no%20Citroën%20C3"
-         target="_blank">WhatsApp</a>
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+      <a class="btn call" href="tel:+351936707997">Ligar</a>
+    </div>
+  </section>
 
+  <!-- CARRO 2: Mini Mini-S -->
+  <section class="car-card">
+    <div class="photo-area" data-total="8">
+      <button class="arrow left disabled">‹</button>
+      <div class="photo-slider">
+        <img src="img/mini-mini-s/1.jpg" alt="Mini Mini-S" class="active">
+        <img src="img/mini-mini-s/2.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/3.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/4.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/5.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/6.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/7.jpg" alt="Mini Mini-S">
+        <img src="img/mini-mini-s/8.jpg" alt="Mini Mini-S">
+      </div>
+      <button class="arrow right">›</button>
+    </div>
+    <div class="car-info">
+      <h3>Mini Mini-S</h3>
+      <p class="year">Ano: 2020</p>
+      <p class="fuel">Combustível: Gasolina</p>
+      <p class="km">Quilómetros: 60 000 km</p>
+      <p class="price">21 500 €</p>
+    </div>
+    <div class="actions">
+      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
       <a class="btn call" href="tel:+351936707997">Ligar</a>
     </div>
   </section>
@@ -78,4 +98,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
