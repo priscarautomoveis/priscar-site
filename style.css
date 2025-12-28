@@ -244,8 +244,9 @@ main {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 480px) {
-  .photo-area {
-    height: 200px;
+@media (max-width:768px) {
+  .logo {
+    height: 50px;  /* reduz um pouco em ecrãs pequenos */
+    max-width: 150px;
   }
 }
