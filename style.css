@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #182744, #1a345e);
+  background: #1e3a7a; /* azul mais claro */
   color: #fff;
   min-height: 100vh;
 }
@@ -44,16 +44,16 @@ header {
 .logo-container {
   flex: 1;
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;     /* centraliza verticalmente na barra */
+  justify-content: flex-start; /* ligeiramente à direita */
+  align-items: center;
+  padding-left: 60px; /* ajusta conforme necessário */
 }
 
 .logo {
-  height: 130px;       /* maior que antes */
-  max-width: 400px;   /* acompanha o aumento sem distorcer */
+  height: 130px;
+  max-width: 400px;
   object-fit: contain;
 }
-
 
 /* ================= SIDEBAR ================= */
 .sidebar {
@@ -86,7 +86,7 @@ header {
   text-decoration: none;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   transition: background 0.25s;
 }
 
@@ -124,7 +124,7 @@ main {
   text-align: center;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px); /* mais Liquid Glass */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   font-size: 22px;
   font-weight: 600;
@@ -135,9 +135,14 @@ main {
   margin-bottom: 40px;
   padding: 18px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12); /* reforço Liquid Glass */
   backdrop-filter: blur(18px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s;
+}
+
+.car-card:hover {
+  transform: translateY(-4px);
 }
 
 /* ================= PHOTO ================= */
@@ -147,7 +152,8 @@ main {
   margin-bottom: 16px;
   border-radius: 18px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.07); /* mais Liquid Glass */
+  cursor: zoom-in;
 }
 
 .car-photo {
@@ -155,6 +161,11 @@ main {
   height: 100%;
   object-fit: cover;
   border-radius: 18px;
+  transition: transform 0.25s;
+}
+
+.car-photo:hover {
+  transform: scale(1.05);
 }
 
 /* ================= ARROWS ================= */
@@ -248,5 +259,13 @@ main {
 @media (max-width: 480px) {
   .photo-area {
     height: 200px;
+  }
+
+  .logo-container {
+    padding-left: 20px;
+  }
+
+  .logo {
+    height: 90px;
   }
 }
