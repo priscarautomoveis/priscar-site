@@ -1,41 +1,49 @@
-.photo-slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 20px;
+body {
+  margin:0; padding:0; font-family:'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a73e8 0%, #4a90e2 100%);
+  color:#fff;
 }
 
-.photo-slider img {
-  display: none; /* só mostra a ativa pelo JS */
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 20px;
-  transition: all 0.5s ease;
+header {
+  position:fixed; top:0; left:0; width:100%; height:70px;
+  background: rgba(0,0,0,0.4);
+  display:flex; justify-content:center; align-items:center;
+  backdrop-filter: blur(10px); z-index:1000;
 }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.2);
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
+.logo-text { font-size:28px; font-weight:bold; text-align:center; }
 
-.arrow:hover {
-  background: rgba(255,255,255,0.4);
-}
+.menu-toggle { position:absolute; left:20px; cursor:pointer; display:flex; flex-direction:column; justify-content:space-between; height:20px; width:25px; }
+.menu-toggle span { display:block; height:3px; background:#fff; border-radius:2px; transition: all 0.3s ease; }
 
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
+.sidebar { position:fixed; top:0; left:-280px; width:280px; height:100%; background: rgba(26,115,232,0.95); backdrop-filter: blur(10px); padding:20px; border-radius:0 10px 10px 0; display:flex; flex-direction:column; gap:20px; transition:left 0.4s ease; z-index:999; }
+.sidebar.active { left:0; }
 
-.arrow.hidden {
-  visibility: hidden;
+.overlay { position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); opacity:0; visibility:hidden; transition: all 0.3s ease; z-index:900; }
+.overlay.active { opacity:1; visibility:visible; }
+
+main { padding-top:90px; width:90%; max-width:1200px; margin:0 auto; }
+.catalog-title { text-align:center; font-size:28px; margin:40px 0; }
+
+.car-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(15px); border-radius:20px; padding:20px; margin-bottom:40px; }
+.photo-area { position:relative; overflow:hidden; border-radius:20px; }
+.photo-slider img { display:none; width:100%; height:250px; object-fit:cover; border-radius:20px; transition:all 0.5s ease; }
+.arrow { position:absolute; top:50%; transform:translateY(-50%); background: rgba(255,255,255,0.2); border:none; color:#fff; font-size:2rem; padding:10px; border-radius:50%; cursor:pointer; z-index:10; transition: all 0.3s ease; }
+.arrow:hover { background: rgba(255,255,255,0.4); }
+.arrow.left { left:10px; }
+.arrow.right { right:10px; }
+
+.car-info h3 { font-size:20px; margin-bottom:10px; color:#fff; text-shadow:0 0 5px rgba(0,0,0,0.3); }
+.car-info .year, .car-info .fuel, .car-info .km { color:#ccc; margin-bottom:5px; }
+.car-info .price { color:#FFD700; font-weight:bold; font-size:18px; }
+
+.actions { display:flex; gap:10px; margin-top:10px; }
+.actions .whatsapp { flex:1; text-align:center; padding:10px; border-radius:15px; font-weight:bold; text-decoration:none; background: rgba(37,211,102,0.5); color:#fff; backdrop-filter: blur(10px); transition: transform 0.2s ease; }
+.actions .call { flex:1; text-align:center; padding:10px; border-radius:15px; font-weight:bold; text-decoration:none; background: rgba(26,115,232,0.5); color:#fff; backdrop-filter: blur(10px); transition: transform 0.2s ease; }
+.actions a:hover { transform: scale(1.05); }
+
+@media(max-width:768px){
+  header { height:60px; }
+  .logo-text { font-size:24px; }
+  .photo-slider img { height:200px; }
 }
