@@ -21,7 +21,7 @@ addCarBtn.addEventListener('click', () => {
     const carHTML = `
       <section class="car-card">
         <div class="photo-area">
-          <img src="${imgSrc}" alt="${name}">
+          <img src="${imgSrc}" alt="${name}" style="border-radius:15px;">
         </div>
         <div class="car-info">
           <h3>${name}</h3>
@@ -39,5 +39,6 @@ addCarBtn.addEventListener('click', () => {
 
     previewCars.innerHTML += carHTML;
   }
+
   reader.readAsDataURL(imageInput.files[0]);
 });
