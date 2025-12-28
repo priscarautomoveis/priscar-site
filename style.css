@@ -1,21 +1,19 @@
-/* Reset básico */
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
 body { 
-  background: linear-gradient(135deg, #1a73e8 0%, #4a90e2 100%); 
+  background: linear-gradient(135deg, #1a73e8 0%, #4a90e2 100%);
   color:#fff; 
 }
 
-/* HEADER */
 header { 
   position: fixed; 
   width: 100%; 
   top: 0; 
   left: 0; 
-  background: rgba(0,0,0,0.3); 
+  background: rgba(0,0,0,0.25); 
   display:flex; 
   align-items:center; 
-  justify-content:center; /* centraliza logo */
-  padding:15px 20px; /* mais espaço para baixo */
+  justify-content:center;
+  padding:18px 20px; 
   z-index:1000; 
   backdrop-filter: blur(15px); 
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -24,61 +22,35 @@ header {
 .logo-container { display:flex; justify-content:center; width:100%; }
 .logo-text { font-size:28px; font-weight:bold; }
 
-/* MENU BOTÃO */
-.menu-btn { 
-  cursor:pointer; 
-  display:flex; 
-  flex-direction:column; 
-  justify-content:space-between; 
-  height:20px; 
-  width:30px; 
+.menu-btn, .more-btn { 
   position:absolute; 
-  left:20px; 
+  cursor:pointer; 
+  user-select:none; 
+  font-size:28px; 
+  top:50%; transform:translateY(-50%); 
+  display:flex; align-items:center; justify-content:center;
 }
-.menu-btn span { 
-  display:block; 
-  height:3px; 
-  background:#fff; 
-  border-radius:2px; 
-  transition: all 0.3s ease; 
-}
+.menu-btn { left:20px; flex-direction:column; height:20px; width:30px; }
+.menu-btn span { display:block; height:3px; background:#fff; border-radius:2px; margin:3px 0; transition: all 0.3s ease; }
+.more-btn { right:20px; color:#fff; transition: transform 0.4s ease; }
 
 /* SIDEBAR */
-.nav-sidebar, .sidebar { 
-  position: fixed; 
-  top:0; 
-  left:-300px; 
-  width:280px; 
-  height:100%; 
+.sidebar { 
+  position: fixed; top:0; left:-300px; width:280px; height:100%; 
   background: rgba(26,115,232,0.95); 
   backdrop-filter: blur(15px); 
-  padding:20px; 
-  display:flex; 
-  flex-direction:column; 
-  gap:20px; 
-  border-radius:0 10px 10px 0; 
-  transition: left 0.4s ease; 
-  z-index:999; 
+  padding:20px; display:flex; flex-direction:column; gap:20px; 
+  border-radius:0 10px 10px 0; transition: left 0.4s ease; z-index:999;
 }
-.nav-sidebar.active, .sidebar.active { left:0; }
-.nav-sidebar h2, .sidebar h2 { font-size:24px; font-weight:bold; margin-bottom:20px; color:#fff; }
-.nav-sidebar a, .sidebar a { color:#fff; text-decoration:none; font-size:18px; padding:10px; border-radius:10px; transition: background 0.3s ease; }
-.nav-sidebar a:hover, .sidebar a:hover { background: rgba(255,255,255,0.2); }
+.sidebar.active { left:0; }
+.sidebar h2 { font-size:24px; font-weight:bold; margin-bottom:20px; color:#fff; }
+.sidebar a { color:#fff; text-decoration:none; font-size:18px; padding:10px; border-radius:10px; transition: background 0.3s ease; }
+.sidebar a:hover { background: rgba(255,255,255,0.2); }
 
-/* OVERLAY */
-.overlay { 
-  position: fixed; 
-  top:0; left:0; 
-  width:100%; height:100%; 
-  background: rgba(0,0,0,0.4); 
-  opacity:0; visibility:hidden; 
-  transition: all 0.3s ease; 
-  z-index:900; 
-}
+.overlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); opacity:0; visibility:hidden; transition: all 0.3s ease; z-index:900; }
 .overlay.active { opacity:1; visibility:visible; }
 
-/* MAIN */
-main { padding-top:100px; width:90%; max-width:1200px; margin:0 auto; }
+main { padding-top:120px; width:90%; max-width:1200px; margin:0 auto; }
 .catalog-title { margin:50px 0; text-align:center; font-size:28px; font-weight:bold; }
 .catalog-title span { background: rgba(255,255,255,0.2); padding:10px 20px; border-radius:20px; backdrop-filter: blur(10px); }
 
@@ -89,7 +61,7 @@ main { padding-top:100px; width:90%; max-width:1200px; margin:0 auto; }
   border-radius:25px; 
   padding:20px; 
   margin-bottom:30px; 
-  border: 1px solid rgba(255,255,255,0.2); /* contorno estilo iPhone */
+  border: 1px solid rgba(255,255,255,0.2); 
   transition: transform 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
@@ -101,50 +73,35 @@ main { padding-top:100px; width:90%; max-width:1200px; margin:0 auto; }
 
 /* FOTO */
 .photo-area { position: relative; margin-bottom:15px; }
-.car-photo { 
-  width:100%; 
-  height: auto; 
-  border-radius:20px; 
-  transition: transform 0.3s ease; 
+.car-photo, .photo-placeholder { 
+  width:100%; height:auto; border-radius:20px; 
+  background: rgba(255,255,255,0.05); 
+  display:flex; align-items:center; justify-content:center; 
+  color:#ccc; font-size:18px; padding:50px 0; 
 }
-.car-photo:hover { transform: scale(1.03); }
 
 /* SETAS */
 .arrow { 
-  position:absolute; 
-  top:50%; 
-  transform: translateY(-50%); 
-  background: rgba(255,255,255,0.2); 
-  border:none; 
-  border-radius:50%; 
-  width:40px; 
-  height:40px; 
-  font-size:24px; 
-  cursor:pointer; 
-  display:flex; 
-  align-items:center; 
-  justify-content:center; 
-  transition: all 0.2s ease;
+  position:absolute; top:50%; transform:translateY(-50%);
+  background: rgba(255,255,255,0.3); border:none; border-radius:50%; width:40px; height:40px; 
+  font-size:24px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition: all 0.2s ease; 
 }
 .arrow:hover { transform: translateY(-50%) scale(1.1); box-shadow:0 5px 15px rgba(0,0,0,0.3);}
-.arrow.left { left:-20px; }
-.arrow.right { right:-20px; }
+.arrow.left { left:10px; }
+.arrow.right { right:10px; }
 .arrow.disabled { opacity:0.3; cursor:default; }
 
-/* INFORMAÇÕES DO CARRO */
+/* INFO */
 .car-info h3 { font-size:22px; margin-bottom:10px; color:#fff; text-shadow:0 0 5px rgba(0,0,0,0.3); }
-.car-info .car-detail { font-size:14px; margin-bottom:5px; color:#ccc; } /* cinza discreto */
+.car-detail { font-size:14px; margin-bottom:5px; color:#ccc; }
 .price { font-size:18px; font-weight:bold; color:#FFD700; margin-bottom:10px; }
 
 /* BOTÕES */
 .actions { display:flex; gap:10px; margin-top:10px; }
 .actions a { flex:1; text-align:center; padding:12px; border-radius:20px; font-weight:bold; text-decoration:none; transition: transform 0.3s ease, box-shadow 0.3s ease; backdrop-filter: blur(10px);}
-.actions a.whatsapp { background: rgba(37,211,102,0.3); color:#fff; }
-.actions a.call { background: rgba(26,115,232,0.3); color:#fff; }
+.actions a.whatsapp { background: rgba(0,180,0,0.6); color:#fff; }
+.actions a.call { background: rgba(0,100,255,0.6); color:#fff; }
 .actions a:hover { transform: scale(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-
-/* FOOTER */
-footer { text-align:center; padding:20px 0; font-size:14px; color:#fff; }
 
 /* RESPONSIVIDADE */
 @media (max-width:768px) {
