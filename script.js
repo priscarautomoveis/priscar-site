@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   });
 
-  // Carrossel de fotos dos carros
+  // Carrossel de fotos
   const carCards = document.querySelectorAll(".car-card");
+
   carCards.forEach((card) => {
     const photoArea = card.querySelector(".photo-area");
     const photo = photoArea.querySelector(".car-photo");
@@ -24,36 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = parseInt(photoArea.dataset.total, 10);
     let index = 0;
 
+    const folder = photo.src.includes("citroen-c3") ? "citroen-c3" : "mini-s";
+
     const updatePhoto = () => {
-      const folder = photo.src.includes("citroen-c3") ? "citroen-c3" : "mini-s";
       photo.src = `img/${folder}/${folder} ${index + 1}.jpg`;
       leftBtn.classList.toggle("disabled", index === 0);
       rightBtn.classList.toggle("disabled", index === total - 1);
     };
 
-    leftBtn.addEventListener("click", () => {
-      if (index > 0) index--;
-      updatePhoto();
-    });
+    leftBtn.addEventListener("click", () => { if(index>0) index--; updatePhoto(); });
+    rightBtn.addEventListener("click", () => { if(index<total-1) index++; updatePhoto(); });
 
-    rightBtn.addEventListener("click", () => {
-      if (index < total - 1) index++;
-      updatePhoto();
-    });
-
-    // Clique na foto abre lightbox
-    photo.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = photo.src;
+    // Lightbox central
+    photoArea.addEventListener("click", (e) => {
+      if(e.target === photo) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        lightboxImg.src = photo.src;
+        lightbox.style.display = "flex";
+      }
     });
   });
 
-  // ================= LIGHTBOX =================
+  // Fechar lightbox
   const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-    lightboxImg.src = "";
-  });
+  lightbox.addEventListener("click", () => { lightbox.style.display = "none"; });
 });
