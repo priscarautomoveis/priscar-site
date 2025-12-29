@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   });
 
-  // Carrossel de fotos
+  // Carrossel de fotos dos carros
   const carCards = document.querySelectorAll(".car-card");
 
   carCards.forEach((card) => {
@@ -33,21 +33,30 @@ document.addEventListener("DOMContentLoaded", () => {
       rightBtn.classList.toggle("disabled", index === total - 1);
     };
 
-    leftBtn.addEventListener("click", () => { if(index>0) index--; updatePhoto(); });
-    rightBtn.addEventListener("click", () => { if(index<total-1) index++; updatePhoto(); });
+    leftBtn.addEventListener("click", () => {
+      if (index > 0) index--;
+      updatePhoto();
+    });
 
-    // Lightbox central
+    rightBtn.addEventListener("click", () => {
+      if (index < total - 1) index++;
+      updatePhoto();
+    });
+
+    // ================= LIGHTBOX =================
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
     photoArea.addEventListener("click", (e) => {
-      if(e.target === photo) {
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
-        lightboxImg.src = photo.src;
-        lightbox.style.display = "flex";
+      // Abre o lightbox com a foto atual
+      lightbox.classList.add("show");
+      lightboxImg.src = photo.src;
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove("show");
       }
     });
   });
-
-  // Fechar lightbox
-  const lightbox = document.getElementById("lightbox");
-  lightbox.addEventListener("click", () => { lightbox.style.display = "none"; });
 });
