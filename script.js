@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* ================= MENU SIDEBAR ================= */
   const menuBtn = document.getElementById("menuBtn");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   });
 
-  // Carrossel fotos carros
+  /* ================= CARROSSEL DE FOTOS ================= */
   const carCards = document.querySelectorAll(".car-card");
 
   carCards.forEach((card) => {
@@ -24,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = parseInt(photoArea.dataset.total, 10);
     let index = 0;
 
-    const folder = photo.src.includes("citroen-c3") ? "citroen-c3" :
-                   photo.src.includes("mini-s") ? "mini-s" : "car-placeholder";
+    const folder = photo.src.includes("citroen-c3") ? "citroen-c3" : "mini-s";
 
     const updatePhoto = () => {
       photo.src = `img/${folder}/${folder} ${index + 1}.jpg`;
@@ -42,25 +42,49 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index < total - 1) index++;
       updatePhoto();
     });
+  });
 
-    // Lightbox
-    photo.addEventListener("click", () => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      lightboxImg.src = photo.src;
+  /* ================= LIGHTBOX ================= */
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  const carPhotos = document.querySelectorAll(".car-photo");
+
+  carPhotos.forEach((img) => {
+    img.addEventListener("click", (e) => {
       lightbox.style.display = "flex";
+      lightboxImg.src = e.target.src;
     });
   });
 
-  // Fechar Lightbox
-  const lightbox = document.getElementById("lightbox");
-  const lightboxClose = document.getElementById("lightbox-close");
-
-  lightboxClose.addEventListener("click", () => {
-    lightbox.style.display = "none";
+  // Fecha lightbox ao clicar fora da imagem
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target === lightboxImg) {
+      lightbox.style.display = "none";
+    }
   });
 
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) lightbox.style.display = "none";
+  /* ================= RODAPÉ DINÂMICO ================= */
+  const yearSpan = document.querySelectorAll(".current-year");
+  const currentYear = new Date().getFullYear();
+  yearSpan.forEach((span) => (span.textContent = currentYear));
+
+  /* ================= SCROLL SUAVE ================= */
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  /* ================= ANIMAÇÕES EXTRA ================= */
+  const cards = document.querySelectorAll(".car-card");
+  cards.forEach((card, i) => {
+    card.style.animationDelay = `${i * 0.1}s`;
+    card.classList.add("animated");
   });
 });
