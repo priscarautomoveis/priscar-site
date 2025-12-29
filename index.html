@@ -3,77 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrisCar – Stand Automóvel</title>
-
-  <!-- SEO BASE -->
-  <meta name="description" content="PrisCar - Stand Automóvel em Vilela. Viaturas usadas com garantia, transparência e confiança.">
-  <meta name="keywords" content="stand automóvel, carros usados, PrisCar, Vilela">
-  <meta name="author" content="PrisCar">
-
+  <title>PrisCar – Catálogo de Viaturas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <div class="header-inner">
+<header>
+  <div class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <!-- MENU BUTTON -->
-    <div class="menu-btn" id="menuBtn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- LOGO -->
-    <div class="logo-container">
-      <img src="img/logo/logo_priscar.png" alt="PrisCar" class="logo">
-    </div>
-
+  <div class="logo-container">
+    <img src="img/logo/logo_priscar.png" alt="PrisCar" class="logo">
   </div>
 </header>
 
-<!-- ================= SIDEBAR ================= -->
-<nav class="sidebar" id="sidebar">
-  <div class="sidebar-header">
-    <h2>PrisCar</h2>
-    <p>Stand Automóvel</p>
-  </div>
-
-  <div class="sidebar-links">
-    <a href="#catalogo">🚗 Catálogo</a>
-    <a href="#vantagens">⭐ Vantagens</a>
-    <a href="#financiamento">💳 Financiamento</a>
-    <a href="#contactos">📍 Contactos</a>
-  </div>
-
-  <div class="sidebar-footer">
-    <p>📞 936 707 997</p>
-    <p>✉️ standpriscar@gmail.com</p>
-  </div>
-</nav>
+<div class="sidebar" id="sidebar">
+  <h2>PrisCar</h2>
+  <a href="#">Catálogo</a>
+  <a href="#">Sobre Nós</a>
+  <a href="#">Serviços</a>
+  <a href="#">Contactos</a>
+  <a href="#">Testemunhos</a>
+  <a href="#">Notícias</a>
+</div>
 
 <div class="overlay" id="overlay"></div>
 
-<!-- ================= MAIN ================= -->
 <main>
-
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Viaturas Selecionadas<br><span>Com Garantia e Confiança</span></h1>
-    <p>Na PrisCar encontras qualidade, transparência e acompanhamento profissional.</p>
-    <a href="#catalogo" class="hero-btn">Ver Catálogo</a>
-  </div>
-</section>
-
-<!-- ================= CATALOGO ================= -->
-<section class="catalog" id="catalogo">
-
-  <div class="catalog-title">
-    <h2>Catálogo de Viaturas</h2>
-    <p>Escolhe a tua próxima viatura</p>
-  </div>
+  <section class="catalog-title">
+    Catálogo de Viaturas
+  </section>
 
   <!-- CARRO 1 -->
   <section class="car-card">
@@ -82,17 +44,13 @@
       <img src="img/citroen-c3/citroen-c3 1.jpg" class="car-photo" alt="Citroën C3">
       <button class="arrow right">›</button>
     </div>
-
     <div class="car-info">
       <h3>Citroën C3 Pure Tech S&S Feel</h3>
-      <div class="car-meta">
-        <span>Ano: 2017</span>
-        <span>Gasolina</span>
-        <span>114 000 km</span>
-      </div>
-      <div class="price">8 990 €</div>
+      <p class="meta">Ano: 2017</p>
+      <p class="meta">Combustível: Gasolina</p>
+      <p class="meta">Quilómetros: 114 000 km</p>
+      <p class="price">8 990 €</p>
     </div>
-
     <div class="actions">
       <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
       <a class="btn call" href="tel:+351936707997">Ligar</a>
@@ -103,62 +61,54 @@
   <section class="car-card">
     <div class="photo-area" data-index="0" data-total="8">
       <button class="arrow left disabled">‹</button>
-      <img src="img/mini-s/mini-s 1.jpg" class="car-photo" alt="Mini Cooper S">
+      <img src="img/mini-s/mini-s 1.jpg" class="car-photo" alt="Mini-S">
       <button class="arrow right">›</button>
     </div>
-
     <div class="car-info">
       <h3>Mini Cooper S 1.6</h3>
-      <div class="car-meta">
-        <span>Ano: 2013</span>
-        <span>Gasolina</span>
-        <span>185 000 km</span>
-      </div>
-      <div class="price">9 990 €</div>
+      <p class="meta">Ano: 2013</p>
+      <p class="meta">Combustível: Gasolina</p>
+      <p class="meta">Quilómetros: 185 000 km</p>
+      <p class="price">9 990 €</p>
     </div>
-
     <div class="actions">
       <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
       <a class="btn call" href="tel:+351936707997">Ligar</a>
     </div>
   </section>
 
-</section>
-
-<!-- ================= VANTAGENS ================= -->
-<section class="advantages" id="vantagens">
-  <h2>Porquê escolher a PrisCar?</h2>
-
-  <div class="advantages-grid">
-    <div class="adv-card">✔️ Viaturas verificadas</div>
-    <div class="adv-card">✔️ Garantia incluída</div>
-    <div class="adv-card">✔️ Transparência total</div>
-    <div class="adv-card">✔️ Apoio pós-venda</div>
-  </div>
-</section>
-
-<!-- ================= FINANCIAMENTO ================= -->
-<section class="finance" id="financiamento">
-  <h2>Financiamento</h2>
-  <p>Tratamos do seu financiamento de forma rápida e segura.</p>
-  <a href="tel:+351936707997" class="hero-btn">Simular Financiamento</a>
-</section>
-
-<!-- ================= CONTACTOS ================= -->
-<section class="contacts" id="contactos">
-  <h2>Contactos</h2>
-  <p>📍 Av. da Corredoura 908, 4580 Vilela</p>
-  <p>📞 936 707 997</p>
-  <p>✉️ standpriscar@gmail.com</p>
-</section>
-
 </main>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="footer-inner">
-    <p>© 2025 PrisCar – Todos os direitos reservados</p>
-    <p>Stand Automóvel em Vilela | Transparência e confiança</p>
+<!-- ================= LIGHTBOX ================= -->
+<div id="lightbox" class="lightbox">
+  <img src="" alt="Carro" id="lightbox-img">
+</div>
+
+<!-- ================= RODAPÉ ================= -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section company">
+      <h3>PrisCar</h3>
+      <p>Confiável e transparente em cada venda.</p>
+    </div>
+    <div class="footer-section links">
+      <h4>Menu</h4>
+      <a href="#">Catálogo</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Serviços</a>
+      <a href="#">Testemunhos</a>
+      <a href="#">Notícias</a>
+      <a href="#">Contactos</a>
+    </div>
+    <div class="footer-section contact">
+      <h4>Contacto</h4>
+      <p>Av. da Corredoura 908, 4580 Vilela</p>
+      <p>Tel: 936 707 997</p>
+      <p>Email: standpriscar@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 PrisCar. Todos os direitos reservados. Desenvolvido com ❤️ por Rui Pedro.</p>
   </div>
 </footer>
 
