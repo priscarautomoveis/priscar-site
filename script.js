@@ -2,20 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
 
-  // Toggle sidebar
   menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
   });
+
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
   });
 
-  // Carrossel de fotos
+  // Carrossel fotos carros
   const carCards = document.querySelectorAll(".car-card");
 
   carCards.forEach((card) => {
@@ -26,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = parseInt(photoArea.dataset.total, 10);
     let index = 0;
 
-    const folder = photo.src.includes("citroen-c3") ? "citroen-c3" : "mini-s";
+    const folder = photo.src.includes("citroen-c3") ? "citroen-c3" :
+                   photo.src.includes("mini-s") ? "mini-s" : "car-placeholder";
 
     const updatePhoto = () => {
       photo.src = `img/${folder}/${folder} ${index + 1}.jpg`;
@@ -34,8 +33,34 @@ document.addEventListener("DOMContentLoaded", () => {
       rightBtn.classList.toggle("disabled", index === total - 1);
     };
 
-    leftBtn.addEventListener("click", () => { if(index>0) index--; updatePhoto(); });
-    rightBtn.addEventListener("click", () => { if(index<total-1) index++; updatePhoto(); });
+    leftBtn.addEventListener("click", () => {
+      if (index > 0) index--;
+      updatePhoto();
+    });
+
+    rightBtn.addEventListener("click", () => {
+      if (index < total - 1) index++;
+      updatePhoto();
+    });
 
     // Lightbox
-    photo.addEventListener("
+    photo.addEventListener("click", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = photo.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  // Fechar Lightbox
+  const lightbox = document.getElementById("lightbox");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  lightboxClose.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+});
