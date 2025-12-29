@@ -14,7 +14,6 @@
     <span></span>
     <span></span>
   </div>
-
   <div class="logo-container">
     <img src="img/logo/logo_priscar.png" alt="PrisCar" class="logo">
   </div>
@@ -22,80 +21,176 @@
 
 <div class="sidebar" id="sidebar">
   <h2>PrisCar</h2>
-  <a href="#">Catálogo</a>
-  <a href="#">Sobre Nós</a>
-  <a href="#">Serviços</a>
-  <a href="#">Contactos</a>
-  <a href="#">Testemunhos</a>
-  <a href="#">Blog</a>
+  <nav>
+    <a href="#catalog">Catálogo</a>
+    <a href="#about">Sobre Nós</a>
+    <a href="#services">Serviços</a>
+    <a href="#contact">Contactos</a>
+    <a href="#trust">Confiança</a>
+  </nav>
 </div>
 
 <div class="overlay" id="overlay"></div>
 
 <main>
-  <section class="catalog-title">
-    Catálogo de Viaturas
-  </section>
 
-  <!-- CARRO 1 -->
-  <section class="car-card">
-    <div class="photo-area" data-index="0" data-total="9">
-      <button class="arrow left disabled">‹</button>
-      <img src="img/citroen-c3/citroen-c3 1.jpg" class="car-photo" alt="Citroën C3">
-      <button class="arrow right">›</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bem-vindo à PrisCar</h1>
+      <p>O seu stand de confiança em viaturas de qualidade.</p>
+      <a href="#catalog" class="btn hero-btn">Ver Catálogo</a>
     </div>
-    <div class="car-info">
-      <h3>Citroën C3 Pure Tech S&S Feel</h3>
-      <p class="meta">Ano: 2017</p>
-      <p class="meta">Combustível: Gasolina</p>
-      <p class="meta">Quilómetros: 114 000 km</p>
-      <p class="price">8 990 €</p>
-    </div>
-    <div class="actions">
-      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-      <a class="btn call" href="tel:+351936707997">Ligar</a>
+    <div class="hero-image">
+      <img src="img/hero-car.png" alt="Carro em destaque">
     </div>
   </section>
 
-  <!-- CARRO 2 -->
-  <section class="car-card">
-    <div class="photo-area" data-index="0" data-total="8">
-      <button class="arrow left disabled">‹</button>
-      <img src="img/mini-s/mini-s 1.jpg" class="car-photo" alt="Mini-S">
-      <button class="arrow right">›</button>
-    </div>
-    <div class="car-info">
-      <h3>Mini Cooper S 1.6</h3>
-      <p class="meta">Ano: 2013</p>
-      <p class="meta">Combustível: Gasolina</p>
-      <p class="meta">Quilómetros: 185 000 km</p>
-      <p class="price">9 990 €</p>
-    </div>
-    <div class="actions">
-      <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
-      <a class="btn call" href="tel:+351936707997">Ligar</a>
+  <!-- Catálogo -->
+  <section id="catalog" class="catalog-section">
+    <h2 class="catalog-title">Catálogo de Viaturas</h2>
+
+    <!-- CARRO 1 -->
+    <section class="car-card">
+      <div class="photo-area" data-index="0" data-total="9">
+        <button class="arrow left disabled">‹</button>
+        <img src="img/citroen-c3/citroen-c3 1.jpg" class="car-photo" alt="Citroën C3">
+        <button class="arrow right">›</button>
+      </div>
+      <div class="car-info">
+        <h3>Citroën C3 Pure Tech S&S Feel</h3>
+        <p class="meta">Ano: 2017</p>
+        <p class="meta">Combustível: Gasolina</p>
+        <p class="meta">Quilómetros: 114 000 km</p>
+        <p class="price">8 990 €</p>
+      </div>
+      <div class="actions">
+        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+        <a class="btn call" href="tel:+351936707997">Ligar</a>
+      </div>
+    </section>
+
+    <!-- CARRO 2 -->
+    <section class="car-card">
+      <div class="photo-area" data-index="0" data-total="8">
+        <button class="arrow left disabled">‹</button>
+        <img src="img/mini-s/mini-s 1.jpg" class="car-photo" alt="Mini-S">
+        <button class="arrow right">›</button>
+      </div>
+      <div class="car-info">
+        <h3>Mini Cooper S 1.6</h3>
+        <p class="meta">Ano: 2013</p>
+        <p class="meta">Combustível: Gasolina</p>
+        <p class="meta">Quilómetros: 185 000 km</p>
+        <p class="price">9 990 €</p>
+      </div>
+      <div class="actions">
+        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+        <a class="btn call" href="tel:+351936707997">Ligar</a>
+      </div>
+    </section>
+
+    <!-- CARRO 3 (placeholder para expandir) -->
+    <section class="car-card">
+      <div class="photo-area" data-index="0" data-total="5">
+        <button class="arrow left disabled">‹</button>
+        <img src="img/car-placeholder.jpg" class="car-photo" alt="Carro em destaque">
+        <button class="arrow right">›</button>
+      </div>
+      <div class="car-info">
+        <h3>Carro em destaque</h3>
+        <p class="meta">Ano: 2020</p>
+        <p class="meta">Combustível: Diesel</p>
+        <p class="meta">Quilómetros: 45 000 km</p>
+        <p class="price">15 990 €</p>
+      </div>
+      <div class="actions">
+        <a class="btn whatsapp" href="https://wa.me/351936707997" target="_blank">WhatsApp</a>
+        <a class="btn call" href="tel:+351936707997">Ligar</a>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Seção Sobre Nós -->
+  <section id="about" class="about-section">
+    <h2>Sobre a PrisCar</h2>
+    <p>A PrisCar é um stand com mais de 10 anos de experiência na venda de viaturas de qualidade e confiança. Priorizamos a transparência e a satisfação dos nossos clientes.</p>
+    <div class="about-cards">
+      <div class="about-card">
+        <h3>Qualidade</h3>
+        <p>Todos os veículos são revisados e certificados.</p>
+      </div>
+      <div class="about-card">
+        <h3>Confiabilidade</h3>
+        <p>Histórico completo de cada carro.</p>
+      </div>
+      <div class="about-card">
+        <h3>Suporte</h3>
+        <p>Atendimento personalizado antes e depois da compra.</p>
+      </div>
     </div>
   </section>
+
+  <!-- Seção Serviços -->
+  <section id="services" class="services-section">
+    <h2>Serviços</h2>
+    <div class="services-cards">
+      <div class="service-card">
+        <h3>Financiamento</h3>
+        <p>Oferecemos planos de financiamento flexíveis para facilitar sua compra.</p>
+      </div>
+      <div class="service-card">
+        <h3>Garantia</h3>
+        <p>Garantia completa para todos os veículos vendidos.</p>
+      </div>
+      <div class="service-card">
+        <h3>Transferência de Veículo</h3>
+        <p>Cuidamos de toda a documentação e transferência de propriedade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Confiança -->
+  <section id="trust" class="trust-section">
+    <h2>Por que confiar na PrisCar?</h2>
+    <ul>
+      <li>Histórico completo do veículo</li>
+      <li>Revisão mecânica completa</li>
+      <li>Veículos certificados</li>
+      <li>Atendimento personalizado</li>
+      <li>Mais de 10 anos de experiência</li>
+    </ul>
+  </section>
+
 </main>
 
 <!-- ================= LIGHTBOX ================= -->
 <div id="lightbox" class="lightbox">
   <img src="" alt="Carro" id="lightbox-img">
+  <span id="lightbox-close">&times;</span>
 </div>
 
 <!-- ================= RODAPÉ ================= -->
 <footer>
   <div class="footer-content">
-    <div class="footer-left">
-      <p>&copy; 2025 PrisCar. Todos os direitos reservados.</p>
-      <p>Localização: Av. da Corredoura 908, 4580 Vilela</p>
+    <div class="footer-section">
+      <h3>Sobre a PrisCar</h3>
+      <p>Stand de confiança em viaturas de qualidade.</p>
     </div>
-    <div class="footer-center">
-      <p>Contacto: 936 707 997 | Email: standpriscar@gmail.com</p>
+    <div class="footer-section">
+      <h3>Contactos</h3>
+      <p>Av. da Corredoura 908, 4580 Vilela</p>
+      <p>Telefone: 936 707 997</p>
+      <p>Email: standpriscar@gmail.com</p>
     </div>
-    <div class="footer-right">
-      <p>Confiável e transparente em cada venda.</p>
+    <div class="footer-section">
+      <h3>Confiança</h3>
+      <p>Transparência, qualidade e histórico completo em todas as vendas.</p>
     </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 PrisCar. Todos os direitos reservados.</p>
   </div>
 </footer>
 
