@@ -2,13 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
 
   // Toggle sidebar
   menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
   });
-
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
@@ -43,20 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
       updatePhoto();
     });
 
-    // ================= LIGHTBOX =================
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-
+    // Lightbox
     photoArea.addEventListener("click", (e) => {
-      // Abre o lightbox com a foto atual
-      lightbox.classList.add("show");
-      lightboxImg.src = photo.src;
-    });
-
-    lightbox.addEventListener("click", (e) => {
-      if (e.target !== lightboxImg) {
-        lightbox.classList.remove("show");
+      if (e.target === photo) { // clique no meio da foto
+        lightbox.style.display = "flex";
+        lightboxImg.src = photo.src;
       }
     });
+  });
+
+  // Fechar lightbox
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
   });
 });
