@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   });
 
-  // Carrossel de fotos dos carros
+  // Carrossel de fotos
   const carCards = document.querySelectorAll(".car-card");
 
   carCards.forEach((card) => {
@@ -34,27 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       rightBtn.classList.toggle("disabled", index === total - 1);
     };
 
-    leftBtn.addEventListener("click", () => {
-      if (index > 0) index--;
-      updatePhoto();
-    });
-
-    rightBtn.addEventListener("click", () => {
-      if (index < total - 1) index++;
-      updatePhoto();
-    });
+    leftBtn.addEventListener("click", () => { if(index>0) index--; updatePhoto(); });
+    rightBtn.addEventListener("click", () => { if(index<total-1) index++; updatePhoto(); });
 
     // Lightbox
-    photoArea.addEventListener("click", (e) => {
-      if (e.target === photo) { // clique no meio da foto
-        lightbox.style.display = "flex";
-        lightboxImg.src = photo.src;
-      }
-    });
-  });
-
-  // Fechar lightbox
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-});
+    photo.addEventListener("
